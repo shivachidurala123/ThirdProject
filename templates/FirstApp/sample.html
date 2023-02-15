@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample.html file</title>
+    <link href="{% static 'css/sample.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <style>
+        p{
+            color:red;
+        }
+        #p1{
+            text-align: center;
+            background-color: aqua;
+        }
+        .pc1{
+            background-color: aquamarine;
+            text-align: right;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        function f1() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            sum = parseInt(a)+parseInt(b);
+            window.alert(sum)
+            document.getElementById("sp1").textContent=sum;
+        }
+    </script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}">
+    </script>
+    <script>
+        const collapseElementList = document.querySelectorAll('.collapse')
+        const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+    </script>
+
+</head>
+<body>
+    <h1 style="color:blue;text-align: center;background-color: yellow;">Sample.html file for Ui-Tech</h1>
+    <hr style="border-color: red;" />
+    <div id="div1">
+        <p id="p1">This is para1</p>
+        <p class="pc1">This is para2</p>
+        <p class="pc1">This is para3</p>
+    </div>
+    <hr id="hr2"/>
+    <h3>Javascript in Webpage</h3>
+    <hr width="80%" color="red"/>
+    <h4>A=11 B=3 a+b</h4>
+    <script lang="javascript">
+    var a=11
+    var b=3
+    document.writeln("<h4>")
+    document.writeln("A = "+a+"<br />")
+    document.writeln("B = "+b+"<br />")
+    document.writeln("A+B = "+a+b+"<br />")
+    document.writeln("</h4>")
+    </script>
+    <h4>
+        <form>
+            <label>Enter A value :</label> <input type="number" id="num1" />
+            <br /><br />
+            <label>Enter B value :</label> <input type="number" id="num2" />
+            <br /><br />
+            <input type="button" value="SUM" onclick="f1()"/>
+            <br /><br />
+            Result :: <span id="sp1"></span>
+        </form>
+    </h4>
+    <hr color="red"/>
+    <h3>Bootstrap-CSS/JS</h3>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light btn-sm">Light</button>
+<button type="button" class="btn btn-dark btn-lg">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+    <hr />
+
+    <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Python
+  </a>
+
+</p>
+<div class="collapse" id="collapseExample1">
+  <div class="card card-body">
+This is Python session simple & easy coding...
+  </div>
+</div>
+<br />
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+    Django
+  </button>
+    <br />
+    <div class="collapse" id="collapseExample2">
+  <div class="card card-body">
+This is Django session simple & easy coding...
+  </div>
+</div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>
+
